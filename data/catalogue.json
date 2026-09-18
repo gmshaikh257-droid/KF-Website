@@ -1,0 +1,178 @@
+{
+ "products": [
+  {
+   "code": "VN 101",
+   "name": "Arch LED Vanity Set with Shelves",
+   "cat": "vanity-sets",
+   "imgs": [
+    "img/vn-101-0.jpg"
+   ],
+   "price": 18500,
+   "slug": "vn-101",
+   "dim": "42 \u00d7 34 \u00d7 16"
+  },
+  {
+   "code": "VN 102",
+   "name": "Oval LED Vanity Set with Six Shelves",
+   "cat": "vanity-sets",
+   "imgs": [
+    "img/vn-102-0.jpg"
+   ],
+   "price": 15500,
+   "slug": "vn-102",
+   "dim": "46 \u00d7 30 \u00d7 15"
+  },
+  {
+   "code": "VN 103",
+   "name": "Round Mirror Console Vanity",
+   "cat": "vanity-sets",
+   "imgs": [
+    "img/vn-103-0.jpg"
+   ],
+   "price": 14000,
+   "slug": "vn-103",
+   "dim": "40 \u00d7 30 \u00d7 16"
+  },
+  {
+   "code": "VN 104",
+   "name": "Ring LED Vanity Set with Shelf Tower",
+   "cat": "vanity-sets",
+   "imgs": [
+    "img/vn-104-0.jpg"
+   ],
+   "price": 15500,
+   "slug": "vn-104",
+   "dim": "44 \u00d7 32 \u00d7 15"
+  },
+  {
+   "code": "VN 105",
+   "name": "Rectangular LED Vanity Set with Shelves",
+   "cat": "vanity-sets",
+   "imgs": [
+    "img/vn-105-0.jpg"
+   ],
+   "price": 15500,
+   "slug": "vn-105",
+   "dim": "45 \u00d7 32 \u00d7 16"
+  },
+  {
+   "code": "VN 106",
+   "name": "Oak Wall Vanity with Round LED Mirror",
+   "cat": "vanity-sets",
+   "imgs": [
+    "img/vn-106-0.jpg"
+   ],
+   "price": 16500,
+   "slug": "vn-106",
+   "dim": "42 \u00d7 28 \u00d7 15"
+  },
+  {
+   "code": "VN 107",
+   "name": "White Wall Vanity with Gold LED Mirror",
+   "cat": "vanity-sets",
+   "imgs": [
+    "img/vn-107-0.jpg"
+   ],
+   "price": 17500,
+   "slug": "vn-107",
+   "dim": "40 \u00d7 30 \u00d7 14"
+  },
+  {
+   "code": "VN 108",
+   "name": "Oak-Top Wall Vanity with Round Mirror",
+   "cat": "vanity-sets",
+   "imgs": [
+    "img/vn-108-0.jpg"
+   ],
+   "price": 16000,
+   "slug": "vn-108",
+   "dim": "46 \u00d7 30 \u00d7 16"
+  },
+  {
+   "code": "VN 109",
+   "name": "Walnut Floating Console with Round Mirror",
+   "cat": "vanity-sets",
+   "imgs": [
+    "img/vn-109-0.jpg"
+   ],
+   "price": 19500,
+   "slug": "vn-109",
+   "dim": "48 \u00d7 26 \u00d7 15"
+  },
+  {
+   "code": "LCD 201",
+   "name": "Wall-Mounted LCD Rack, White &amp; Oak",
+   "cat": "lcd-tv-racks",
+   "imgs": [
+    "img/lcd-201-0.jpg"
+   ],
+   "price": 12500,
+   "slug": "lcd-201",
+   "dim": "48 \u00d7 12 \u00d7 14"
+  },
+  {
+   "code": "LCD 202",
+   "name": "Wall-Mounted LCD Rack, Oak",
+   "cat": "lcd-tv-racks",
+   "imgs": [
+    "img/lcd-202-0.jpg"
+   ],
+   "price": 13500,
+   "slug": "lcd-202",
+   "dim": "44 \u00d7 12 \u00d7 14"
+  },
+  {
+   "code": "WR 301",
+   "name": "Wall Cabinet with Open Shelves",
+   "cat": "wall-racks",
+   "imgs": [
+    "img/wr-301-0.jpg"
+   ],
+   "price": 9500,
+   "slug": "wr-301",
+   "dim": "36 \u00d7 26 \u00d7 12"
+  },
+  {
+   "code": "ST 401",
+   "name": "Study Table, White &amp; Black X-Frame",
+   "cat": "study-tables",
+   "imgs": [
+    "img/st-401-0.jpg",
+    "img/st-401-1.jpg"
+   ],
+   "price": 14500,
+   "slug": "st-401",
+   "dim": "47 \u00d7 30 \u00d7 24"
+  },
+  {
+   "code": "OR 501",
+   "name": "Oven Rack, Light Grey",
+   "cat": "oven-stands",
+   "imgs": [
+    "img/or-501-0.jpg"
+   ],
+   "price": 11500,
+   "slug": "or-501",
+   "dim": "30 \u00d7 46 \u00d7 16"
+  },
+  {
+   "code": "OR 502",
+   "name": "Oven Rack, Walnut",
+   "cat": "oven-stands",
+   "imgs": [
+    "img/or-502-0.jpg"
+   ],
+   "price": 12500,
+   "slug": "or-502",
+   "dim": "30 \u00d7 46 \u00d7 16"
+  }
+ ],
+ "shop": [
+  "img/shopfront-0.jpg",
+  "img/shopfront-1.jpg",
+  "img/shopfront-2.jpg"
+ ],
+ "shop_wide": [
+  "img/shopfront-wide.jpg"
+ ]
+}

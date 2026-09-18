@@ -1,0 +1,98 @@
+/*
+Theme Name:   Kent Furniture
+Theme URI:    https://kentfurniture.pk
+Description:  Kent Furniture child theme for Blocksy. Theme D design system.
+Author:       Kent Furniture
+Template:     blocksy
+Version:      0.1.0
+Text Domain:  kent-child
+*/
+
+/* ---------- Kent design tokens ---------- */
+:root{
+  --kent-ink:#16130F;
+  --kent-paper:#FBF9F6;
+  --kent-card:#FFFFFF;
+  --kent-soft:#F3F0EC;
+  --kent-line:#E4DFD8;
+  --kent-mid:#6E655C;
+  --kent-red:#D01A2C;
+  --kent-amber:#EE8B1F;
+  --kent-gold:#F5C81D;
+  --kent-wa:#25D366;
+  --kent-radius:12px;
+}
+
+body{ background:var(--kent-paper); color:var(--kent-ink); }
+
+/* Headings use Archivo, body IBM Plex Sans, codes/dimensions IBM Plex Mono.
+   Set these in Customize > Typography, or uncomment to force: */
+/*
+h1,h2,h3,h4{ font-family:Archivo,system-ui,sans-serif; font-weight:700; letter-spacing:-.03em; }
+body{ font-family:'IBM Plex Sans',system-ui,sans-serif; }
+.kent-code,.kent-dim{ font-family:'IBM Plex Mono',ui-monospace,monospace; }
+*/
+
+/* ---------- Product code + dimension line ---------- */
+.kent-code{
+  font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#8C8379;
+}
+.kent-dim{
+  font-size:10.5px; color:#9A9188; letter-spacing:.03em; margin-top:6px;
+}
+
+/* ---------- COD badge ---------- */
+.kent-cod{
+  display:inline-flex; align-items:center; gap:5px;
+  font-size:9.5px; letter-spacing:.09em; text-transform:uppercase;
+  color:#8A5613; background:#FDF4E6; border:1px solid #F0D9AE;
+  border-radius:99px; padding:4px 9px;
+}
+
+/* ---------- Buttons ---------- */
+.woocommerce a.button, .woocommerce button.button,
+.woocommerce .single_add_to_cart_button{
+  background:var(--kent-ink) !important; color:#fff !important;
+  border-radius:99px !important; min-height:46px; font-weight:600;
+}
+.woocommerce a.button:hover, .woocommerce button.button:hover{ background:#332E28 !important; }
+
+.kent-wa-btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:var(--kent-wa); color:#fff; border-radius:99px;
+  min-height:48px; padding:0 22px; font-weight:600;
+}
+.kent-wa-btn:hover{ background:#1DA851; color:#fff; }
+
+/* ---------- Sticky WhatsApp ---------- */
+.kent-fab{
+  position:fixed; right:18px; bottom:18px; z-index:80;
+  width:56px; height:56px; border-radius:50%;
+  background:var(--kent-wa); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 8px 22px rgba(37,211,102,.4);
+}
+@media(max-width:840px){ .kent-fab{ bottom:70px; } }
+
+/* ---------- Mobile bottom bar ---------- */
+.kent-mobile-bar{ display:none; }
+@media(max-width:840px){
+  .kent-mobile-bar{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    position:fixed; bottom:0; left:0; right:0; z-index:80;
+    background:rgba(22,19,15,.98); border-top:1px solid rgba(255,255,255,.13);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .kent-mobile-bar a{
+    display:flex; flex-direction:column; align-items:center; gap:4px;
+    padding:9px 4px 11px; font-size:10.5px; font-weight:600;
+    color:#CFC6BB; min-height:56px;
+  }
+  .kent-mobile-bar a.is-wa{ background:var(--kent-wa); color:#fff; }
+  body{ padding-bottom:64px; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media(prefers-reduced-motion:reduce){
+  *{ animation:none !important; transition:none !important; }
+}
