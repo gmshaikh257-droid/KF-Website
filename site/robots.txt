@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kentfurniture.pk/sitemap.xml
