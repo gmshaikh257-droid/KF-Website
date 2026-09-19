@@ -3,11 +3,16 @@
 'use strict';
 var K='kent_cart_v3';
 function abs(u){try{return new URL(u,location.href).href}catch(e){return u}}
-function read(){try{return JSON.parse(localStorage.getItem(K))||[]}catch(e){return window.__c||[]}}
+function read(){
+  var c;try{c=JSON.parse(localStorage.getItem(K))||[]}catch(e){c=window.__c||[]}
+  if(!Array.isArray(c))return [];
+  return c.filter(function(i){return i&&typeof i.code==='string'&&typeof i.name==='string'&&isFinite(i.price)&&i.q>0&&i.q<100});
+}
 function write(c){window.__c=c;try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}paint()}
 function qty(){return read().reduce(function(a,i){return a+i.q},0)}
 function total(){return read().reduce(function(a,i){return a+i.price*i.q},0)}
 function money(v){return 'PKR '+v.toLocaleString('en-PK')}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 
 var bar=document.getElementById('cartbar');
 function paint(){
@@ -144,7 +149,8 @@ var main=document.querySelector('.gal .main img');
 document.querySelectorAll('.thumbs button').forEach(function(t){
   t.addEventListener('click',function(){
     document.querySelectorAll('.thumbs button').forEach(function(x){x.setAttribute('aria-current','false')});
-    t.setAttribute('aria-current','true'); if(main)main.src=t.dataset.full;
+    t.setAttribute('aria-current','true');
+    if(main){main.src=t.dataset.full; if(t.dataset.bg) main.parentNode.style.setProperty('--bg','url('+t.dataset.bg+')')}
   });
 });
 
@@ -155,8 +161,8 @@ if(document.getElementById('lines')){
     var c=read(),L=document.getElementById('lines'),cw=document.getElementById('cw'),mt=document.getElementById('mt');
     if(!c.length){cw.style.display='none';mt.style.display='block';return}
     cw.style.display='';mt.style.display='none';
-    L.innerHTML=c.map(function(i){return '<div class="line"><a class="th" href="'+i.url+'"><img src="'+i.img+'" alt=""></a>'+
-      '<div class="meta"><div class="c">'+i.code+'</div><h3>'+i.name+'</h3><div class="p">'+money(i.price)+'</div>'+
+    L.innerHTML=c.map(function(i){return '<div class="line"><a class="th" href="'+esc(i.url)+'"><img src="'+esc(i.img)+'" alt=""></a>'+
+      '<div class="meta"><div class="c">'+esc(i.code)+'</div><h3>'+esc(i.name)+'</h3><div class="p">'+money(i.price)+'</div>'+
       '<div class="qty"><button data-a="-" data-c="'+i.code+'" aria-label="Decrease">&minus;</button><span>'+i.q+'</span>'+
       '<button data-a="+" data-c="'+i.code+'" aria-label="Increase">+</button></div><br>'+
       '<button class="rm" data-a="x" data-c="'+i.code+'">Remove</button></div></div>'}).join('');
